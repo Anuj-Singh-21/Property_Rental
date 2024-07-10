@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+ 
 const About = () => {
   return (
     <div className="flex flex-row mx-0 my-4 border-2 border-textsoft lg:m-32">

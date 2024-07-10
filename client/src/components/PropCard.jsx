@@ -7,7 +7,10 @@ const Card = () => {
   const image = [Img, Img2, Img3];
   return (
     <div className="  shadow-md rounded-lg my-4 w-96 lg:w-96">
-      <MySlider images={image} />
+      <MySlider
+        images={image}
+        classname={"rounded-lg w-screen h-72 object-cover brightness-50"}
+      />
       <div className="flex justify-between mx-4 my-1 text-textdark">
         <div>
           <div>Sale</div>

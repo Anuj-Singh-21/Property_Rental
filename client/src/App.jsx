@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About/About";
@@ -9,6 +10,7 @@ import Owner from "./pages/About/Owner";
 import FAQ from "./pages/About/FAQ";
 import Tenants from "./pages/About/Tenants";
 import AddListing from "./pages/AddListing";
+import Listing from "./pages/Listing";
 
 function App() {
   return (
@@ -23,10 +25,10 @@ function App() {
             <Route path="tenants" element={<Tenants />} />
             <Route path="faq" element={<FAQ />} />
             <Route index element={<About />} />
-            <Route index element={<About />} />
           </Route>
 
           <Route path="listings" element={<Listings />} />
+          <Route path="listing/:id" element={<Listing />} />
           <Route path="add-listing" element={<AddListing />} />
         </Route>
       </Routes>

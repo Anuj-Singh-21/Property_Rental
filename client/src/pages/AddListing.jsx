@@ -139,13 +139,18 @@ const AddListing = () => {
             className="w-full mt-4 py-2 px-4 rounded-lg text-center outline-none"
             placeholder="Description"
           />
+          <input
+            type="file"
+            multiple
+            className="w-full mt-4 py-2 px-4 rounded-lg text-center outline-none bg-white"
+          />
 
           <Select
             placeholder="Amenities..."
             closeMenuOnSelect={false}
             options={option}
             isMulti={true}
-            className="mt-4"
+            className="mt-4 max-w-lg"
           />
 
           <button className="bg-blue text-white center center w-full mx-auto px-8 py-2 mt-4 rounded-md ">
