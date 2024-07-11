@@ -1,6 +1,3 @@
-import Img from "../assets/images/BGIMG.jpg";
-import Img2 from "../assets/images/image2.jpg";
-import Img1 from "../assets/images/image1.jpg";
 import MySlider from "./../components/Slider";
 import {
   IoIosArrowDropdown,
@@ -14,7 +11,11 @@ import { useState } from "react";
 import FeaturedCard from "../components/FeaturedCard";
 
 const Listing = () => {
-  const images = [Img, Img1, Img2];
+  const images = [
+    "https://cdn.pixabay.com/photo/2018/01/09/10/34/tree-3071284_640.jpg",
+    "https://cdn.pixabay.com/photo/2017/03/30/00/24/villa-2186906_640.jpg",
+    "https://cdn.pixabay.com/photo/2022/07/09/05/23/house-7310177_640.jpg",
+  ];
   const [showDetails, setShowDetails] = useState(false);
   const [showAmenities, setShowAmenities] = useState(false);
   const [showDescription, setShowDescription] = useState(false);
@@ -50,15 +51,15 @@ const Listing = () => {
         <div className="lg:w-2/3 rounded-md ">
           <div className="px-4 py-2 my-2 bg-white rounded-md shadow-md">
             <button className="rounded-full bg-borderblue text-xs text-black px-4 py-1 my-2 ">
-              Buy
+              Rent
             </button>
-            <h1 className=" mb-4 text-xl font-bold">Property Name</h1>
-            <h2 className="my-4">Property Address</h2>
-            <h2 className="my-4 text-blue text-2xl">$Property Price</h2>
+            <h1 className=" mb-4 text-xl font-bold">Beach Side Paradise</h1>
+            <h2 className="my-4">123 Beach Lane, Miami, FL</h2>
+            <h2 className="my-4 text-blue text-2xl">$ 250/Day</h2>
             <h2 className="my-4 text-textsoft text-sm flex gap-10">
-              <p>Bathrooms</p>
-              <p>Bedrooms</p>
-              <p>Area</p>
+              <p>Bathrooms : 4</p>
+              <p>Bedrooms : 4</p>
+              <p>Area : 1500 sq ft</p>
             </h2>
           </div>
           <div className="px-4  my-2 bg-white text-textsoft rounded-md shadow-md">
@@ -96,7 +97,7 @@ const Listing = () => {
                 <h1 className="text-textdark font-bold text-sm">
                   Area Size (sqft):{" "}
                 </h1>
-                <h1 className=" text-sm"> 1100</h1>
+                <h1 className=" text-sm"> 1500</h1>
               </div>
             </div>
           </div>
@@ -142,7 +143,7 @@ const Listing = () => {
 
           <div className="px-4 my-2 bg-white text-textsoft rounded-md shadow-md">
             <div className=" flex justify-between my-2">
-              <h1 className="text-black font-bold text-2xl my-4">Aminities</h1>
+              <h1 className="text-black font-bold text-2xl my-4">Amenities</h1>
               <button
                 onClick={() => {
                   setShowAmenities((prev) => !prev);
@@ -160,7 +161,13 @@ const Listing = () => {
                 />
               </button>
             </div>
-            <div className={showAmenities ? "pb-4 grid grid-cols-3" : "hidden"}>
+            <div
+              className={
+                showAmenities
+                  ? "pb-4 grid lg:grid-cols-3 md:grid-cols-1"
+                  : "hidden"
+              }
+            >
               {options.map((option) => (
                 <div
                   key={option.label}
@@ -177,7 +184,7 @@ const Listing = () => {
         <div className="lg:w-1/4 rounded-md ">
           <div className="flex justify-center px-2 py-2 my-2 bg-white rounded-md shadow-md">
             <button className="rounded-md px-6 py-4 font-bold text-darkblue bg-lightblue border border-borderblue">
-              $ Price - Purchase
+              $ 250 - Rent
             </button>
           </div>
           <div className="px-2 py-2 my-2 bg-white rounded-md shadow-md">

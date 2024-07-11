@@ -1,4 +1,3 @@
-import React from 'react';
 import ImageOverlay from 'react-image-overlay';
 
 const ImageWithText = ({ imageUrl, text }) => {

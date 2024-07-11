@@ -35,12 +35,12 @@ const Navbar = () => {
           Add Property
         </NavLink>
 
-        <NavLink
+        {/* <NavLink
           to="/pages"
           className="bg-darkblue text-white px-3 py-2 font-normal rounded-sm"
         >
           Sign In
-        </NavLink>
+        </NavLink> */}
       </div>
     </nav>
   );

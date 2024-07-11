@@ -1,7 +1,7 @@
 import { useState } from "react";
-import BGIMG from "../assets/images/BGIMG.jpg";
 import Card from "../components/PropCard";
 import { MdOutlineArrowDropDown } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const Home = () => {
     <section className="overflow-x-hidden bg-slate-100">
       <div
         style={{
-          background: `url(${BGIMG}) no-repeat center center`,
+          background: `url(https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=600) no-repeat center center`,
           backgroundColor: " rgba(0, 180, 251, 0.657)",
           backgroundBlendMode: "multiply",
           backgroundSize: "cover",
@@ -126,9 +126,11 @@ const Home = () => {
         <Card />
       </div>
       <div className="flex justify-center">
-        <button className="bg-lightblue border-2 border-borderblue px-10 py-3  text-blue text-xl rounded-md mb-10">
-          Browse More Properties
-        </button>
+        <Link to="/listings">
+          <button className="bg-lightblue border-2 border-borderblue px-10 py-3  text-blue text-xl rounded-md mb-10">
+            Browse More Properties
+          </button>
+        </Link>
       </div>
       <div className="bg-lightblue text-blue grid grid-cols-1 justify-items-center lg:grid-cols-3">
         <div className="flex flex-col py-4 gap-3">
@@ -138,9 +140,11 @@ const Home = () => {
           <h2 className="text-sm">
             Select from thousands of options, without brokerage.
           </h2>
-          <button className="bg-darkblue px-5 mx-auto text-sm rounded-sm text-white">
-            Find Now
-          </button>
+          <Link to="/listings">
+            <button className="flex bg-darkblue px-5 mx-auto text-sm rounded-sm text-white">
+              Find Now
+            </button>
+          </Link>
         </div>
         <div className=" lg:border border-solid border-blue my-6 "></div>
         <div className="flex flex-col py-4 gap-3">
@@ -148,9 +152,11 @@ const Home = () => {
             List Your Property
           </h1>
           <h2 className="text-sm">For Free. Without any brokerage.</h2>
-          <button className="bg-darkblue px-5 mx-auto text-sm rounded-sm text-white">
-            Free Posting
-          </button>
+          <Link to="/add-listing">
+            <button className="flex bg-darkblue px-5 mx-auto text-sm rounded-sm text-white">
+              Free Posting
+            </button>
+          </Link>
         </div>
       </div>
     </section>

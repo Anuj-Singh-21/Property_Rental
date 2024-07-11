@@ -11,10 +11,12 @@ import FAQ from "./pages/About/FAQ";
 import Tenants from "./pages/About/Tenants";
 import AddListing from "./pages/AddListing";
 import Listing from "./pages/Listing";
+import ScrollToTop from "./components/ScrolltoTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
